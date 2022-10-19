@@ -166,6 +166,8 @@ int main(int argc, char **argv) {
     ROS_ERROR("%s\n", laser.DescribeError());
   }
 
+  std::cout << "serial number: " << laser.getSerialNumber() << std::endl;
+
   ros::Rate r(30);
 
   while (ret && ros::ok()) {
